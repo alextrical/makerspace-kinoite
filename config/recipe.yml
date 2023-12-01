@@ -26,6 +26,14 @@ modules:
     install:
       # - micro
       # - starship
+      - mesa-libGLU #Required by SheetCAM
+      - webkit2gtk4.0 #Required by OrcaSlicer
+      - wine-core
+      - wine-core.i686
+      - wine-ldap
+      - wine-mono
+      - patch
+      - cabextract
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -43,7 +51,7 @@ modules:
       # - devpod # https://devpod.sh/ as an rpm
       # - gnome-vrr # enables gnome-vrr for your image
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
-      # - laptop # installs TLP and configures your system for laptop usage
+      - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
 
 
@@ -54,8 +62,12 @@ modules:
       # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
+      - Inkscape: org.inkscape.Inkscape
 
   - type: script
     scripts:
+      # # Gets the latest plugins
+      # - flathub.sh
+      # - inkscape.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
