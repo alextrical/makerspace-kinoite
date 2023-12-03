@@ -1,5 +1,5 @@
 ublue_variants:
   - label: alextrical/makerspace-kinoite
-    ks: /kickstart/ublue-os.ks
+    ks: /kickstart/makerspace-kinoite.ks
     flavors:
       - label: makerspace-kinoite
