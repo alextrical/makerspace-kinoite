@@ -34,8 +34,6 @@ modules:
       - wine-mono
       - patch
       - cabextract
-      - https://github.com/alextrical/stl-thumb/releases/download/release/stl-thumb-0.5.0-1.x86_64.rpm
-      - https://github.com/alextrical/stl-thumb-kde/releases/download/Release/stl-thumb-kde-0.5.0-Linux.rpm
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -69,6 +67,7 @@ modules:
   - type: script
     scripts:
       # # Gets the latest plugins
+      - stlthumb.sh
       - flathub.sh
       # - inkscape.sh
       # this sets up the proper policy & signing files for signed images to work
