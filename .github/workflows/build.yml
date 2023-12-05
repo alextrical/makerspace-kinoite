@@ -199,3 +199,7 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
+
+      - name: Setup tmate session - Debug
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
