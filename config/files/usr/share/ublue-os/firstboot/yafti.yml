@@ -62,11 +62,13 @@ screens:
             - Font Downloader: org.gustavoperedo.FontDownloader
             - Mozilla Firefox: org.mozilla.firefox
             - Breeze Theme: org.gtk.Gtk3theme.Breeze
+            - Gwenview: org.kde.gwenview
+            - Okular: org.kde.okular
+            - VLC: org.videolan.VLC
         Maker Apps:
           description: Makerspace applications.
           default: true
           packages:
-            - Lutris: net.lutris.Lutris
             - LibreOffice: org.libreoffice.LibreOffice
         CAD/CAM Apps:
           description: Makerspace applications.
