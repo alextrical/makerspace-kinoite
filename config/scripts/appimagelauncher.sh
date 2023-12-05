@@ -12,4 +12,4 @@ curl -s https://api.github.com/repos/TheAssassin/AppImageLauncher/releases/lates
 | tr -d \" \
 | xargs wget - -O /tmp/appimagelauncher.x86_64.rpm
 # rpm-ostree install /tmp/appimagelauncher.x86_64.rpm
-rm /tmp/appimagelauncher.x86_64.rpm
+# rm /tmp/appimagelauncher.x86_64.rpm
