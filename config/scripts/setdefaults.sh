@@ -6,8 +6,8 @@
 set -oue pipefail
 
 # #Allow Passwordless Login
-sed -i '1 i\auth       sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /usr/etc/pam.d/sddm
-sed -i '1 aauth       sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /usr/etc/pam.d/kde
+# sed -i '1 i\auth       sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /usr/etc/pam.d/sddm
+# sed -i '1 aauth       sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /usr/etc/pam.d/kde
 
 # #Set Dark theme as default
 # kwriteconfig5 --file usr/share/kde-settings/kde-profile/default/xdg/kdeglobals --group KDE --key LookAndFeelPackage org.kde.breezedark.desktop

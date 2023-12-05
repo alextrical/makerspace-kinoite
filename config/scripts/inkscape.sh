@@ -21,3 +21,13 @@ curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
 | xargs wget - -O /tmp/inkstitch.x86_64.rpm
 rpm-ostree install /tmp/inkstitch.x86_64.rpm
 rm /tmp/inkstitch.x86_64.rpm
+
+#Get latest release
+# mkdir -p /usr/share/inkscape
+curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
+| grep "browser_download_url.*-linux.tar.xz" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| xargs wget -qO - \
+| xz -d \
+| tar -xf - -C /usr/share/inkscape/
