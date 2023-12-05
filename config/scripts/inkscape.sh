@@ -13,13 +13,13 @@ git clone https://github.com/alextrical/mightyscape-1.2.git /usr/share/inkscape/
 mv /usr/share/inkscape/git/mightyscape-1.2/extensions/mightyscape /usr/share/inkscape/extensions/mightyscape
 rm -rf /usr/share/inkscape/git
 
-# # This script grabs the latest inkstitch release
+# This script grabs the latest inkstitch release
 curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
 | grep "browser_download_url.*x86_64.rpm" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | xargs wget - -O /tmp/inkstitch.x86_64.rpm
-rpm-ostree install /tmp/inkstitch.x86_64.rpm
+# rpm-ostree install /tmp/inkstitch.x86_64.rpm
 rm /tmp/inkstitch.x86_64.rpm
 
 #Get latest release
