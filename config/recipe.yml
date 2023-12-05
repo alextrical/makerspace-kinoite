@@ -71,7 +71,7 @@ modules:
       # # Gets the latest plugins
       - stlthumb.sh
       - flathub.sh
-      - inkscape.
+      - inkscape.sh
       # this sets defaults for user profiles and logins
       - setdefaults.sh
       # this sets up the proper policy & signing files for signed images to work
