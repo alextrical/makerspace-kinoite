@@ -28,10 +28,10 @@ modules:
       # - starship
       - mesa-libGLU #Required by SheetCAM
       - webkit2gtk4.0 #Required by OrcaSlicer
-      - wine-core
-      - wine-core.i686
-      - wine-ldap
-      - wine-mono
+      # - wine-core
+      # - wine-core.i686
+      # - wine-ldap
+      # - wine-mono
       - patch
       - cabextract
     remove:
