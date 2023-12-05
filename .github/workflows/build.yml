@@ -200,6 +200,6 @@ jobs:
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
 
-      - name: Setup tmate session - Debug
-        if: ${{ failure() }}
-        uses: mxschmitt/action-tmate@v3
+      # - name: Setup tmate session - Debug
+      #   if: ${{ failure() }}
+      #   uses: mxschmitt/action-tmate@v3
