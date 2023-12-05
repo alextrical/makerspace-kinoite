@@ -72,8 +72,8 @@ modules:
       - stlthumb.sh
       - flathub.sh
       - inkscape.sh
-      # this sets defaults for user profiles and logins
-      - setdefaults.sh
+      - lightburn.sh
+      - sheetcam.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
 

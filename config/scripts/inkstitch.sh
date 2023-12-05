@@ -5,15 +5,15 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-#Get latest release
-# mkdir -p /usr/share/inkscape
-curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
-| grep "browser_download_url.*-linux.tar.xz" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| xargs wget -qO - \
-| xz -d \
-| tar -xf - -C /usr/share/inkscape/
+# #Get latest release
+# # mkdir -p /usr/share/inkscape
+# curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
+# | grep "browser_download_url.*-linux.tar.xz" \
+# | cut -d : -f 2,3 \
+# | tr -d \" \
+# | xargs wget -qO - \
+# | xz -d \
+# | tar -xf - -C /usr/share/inkscape/
 
 # # get up to date inkex version (March 18 2023)
 # pip install "inkex @ git+https://gitlab.com/inkscape/extensions.git@29205f3cc6c39283e190a36d72d01ef428f668e5"
