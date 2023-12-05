@@ -43,6 +43,25 @@ screens:
         We have detected that you don't have Flathub's repository on your current user account. We will now add that repository to your account.
       actions:
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  create-makerspace-account:
+    source: yafti.screen.consent
+    values:
+      title: Setup Makerspace account!
+      # condition:
+      #   run: flatpak remotes --columns=name | grep fedora
+      description: |
+        We have detected the Makerspace account is missing.
+      actions:
+        - run: grep -E '^dialout:' /usr/lib/group >> /etc/group
+        - run: grep -E '^users:' /usr/lib/group >> /etc/group
+        - run: groupadd -r nopasswdlogin
+        - run: adduser -mG nopasswdlogin,dialout,users -c "Maker Space" makerspace
+        - run: cp /usr/share/plasma/avatars/photos/Pencils.png /var/lib/AccountsService/icons/makerspace
+        - run: echo "[User]" | tee /var/lib/AccountsService/users/makerspace
+        - run: echo "Icon=/var/lib/AccountsService/icons/makerspace" | tee -a /var/lib/AccountsService/users/makerspace
+        - run: kwriteconfig5 --file usr/etc/sddm.conf --group Autologin --key User makerspace 
+        - run: kwriteconfig5 --file usr/etc/sddm.conf --group Autologin --key Session plasmax11.desktop 
+        - run: kwriteconfig5 --file usr/etc/sddm.conf --group General --key DisplayServer x11 
   applications:
     source: yafti.screen.package
     values:
