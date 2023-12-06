@@ -20,7 +20,7 @@ chmod +x /tmp/OrcaSlicer.AppImage
 (cd /tmp && /tmp/OrcaSlicer.AppImage --appimage-extract)
 mv /tmp/squashfs-root/usr/share/icons/hicolor/192x192/apps/* /usr/share/icons/hicolor/192x192/apps
 mv /tmp/squashfs-root/bin/* /usr/bin
-mv /tmp/squashfs-root/resources/* /usr/resources
+mv /tmp/squashfs-root/resources /usr/resources
 mv /tmp/squashfs-root/OrcaSlicer.desktop /usr/share/applications/OrcaSlicer.desktop
 sed -i 's@AppRun@/usr/bin/orca-slicer@g' /usr/share/applications/OrcaSlicer.desktop
 sed -i 's@Utility;@Graphics;3DGraphics;Engineering;@g' /usr/share/applications/OrcaSlicer.desktop
