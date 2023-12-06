@@ -17,7 +17,7 @@ curl -s https://api.github.com/repos/SoftFever/OrcaSlicer/releases/latest \
 chmod +x /tmp/OrcaSlicer.AppImage
 
 #Extract and move to Usr folder
-(cd /tmp && OrcaSlicer.AppImage --appimage-extract)
+(cd /tmp && /tmp/OrcaSlicer.AppImage --appimage-extract)
 mv /tmp/squashfs-root/usr /usr
 mv /tmp/squashfs-root/bin /usr/bin
 mv /tmp/squashfs-root/resources /usr/resources
