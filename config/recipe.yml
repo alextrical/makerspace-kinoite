@@ -69,8 +69,7 @@ modules:
   - type: script
     scripts:
       # # Gets the latest plugins
-      - appimages.sh
-      # - appimagelauncher.sh
+      - orcaslicer.sh
       - stlthumb.sh
       - flathub.sh
       - inkscape.sh
