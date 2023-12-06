@@ -8,7 +8,9 @@ set -oue pipefail
 # Your code goes here.
 #SheetCAM
 wget https://www.sheetcam.com/Downloads/akp3fldwqh/SheetCam_setupV7.1.35-64.bin --show-progress -nc -q -P /tmp 
-unzip /tmp/SheetCam_setupV7.1.35-64.bin "data/*" -d /usr/share/SheetCam
+# unzip /tmp/SheetCam_setupV7.1.35-64.bin "data/*" -d /usr/share/SheetCam
+7z x -O/usr/share/SheetCam /tmp/SheetCam_setupV7.1.35-64.bin
+
 cat > /usr/share/applications/SheetCAM.desktop << EOF
 [Desktop Entry]
 Encoding=UTF-8
