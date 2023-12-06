@@ -11,6 +11,7 @@ wget https://www.sheetcam.com/Downloads/akp3fldwqh/SheetCam_setupV7.1.35-64.bin 
 # unzip /tmp/SheetCam_setupV7.1.35-64.bin "data/*" -d /usr/share/SheetCam
 7z x -O/usr/share/SheetCam '-i!data/*' /tmp/SheetCam_setupV7.1.35-64.bin
 chmod 755 /usr/share/SheetCam
+chmod 755 /usr/share/SheetCam/data
 cat > /usr/share/applications/SheetCAM.desktop << EOF
 [Desktop Entry]
 Encoding=UTF-8
