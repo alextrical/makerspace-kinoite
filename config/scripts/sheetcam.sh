@@ -9,7 +9,7 @@ set -oue pipefail
 #SheetCAM
 wget https://www.sheetcam.com/Downloads/akp3fldwqh/SheetCam_setupV7.1.35-64.bin --show-progress -nc -q -P /tmp 
 # unzip /tmp/SheetCam_setupV7.1.35-64.bin "data/*" -d /usr/share/SheetCam
-7z x -O/usr/share/SheetCam /tmp/SheetCam_setupV7.1.35-64.bin
+7z x -O/usr/share/SheetCam '-i!data/*' /tmp/SheetCam_setupV7.1.35-64.bin
 
 cat > /usr/share/applications/SheetCAM.desktop << EOF
 [Desktop Entry]
@@ -18,7 +18,7 @@ Value=1.0
 Type=Application
 Name=SheetCam TNG
 GenericName=CAM software
-Comment=SheetCam TNG V7.1.35
+Comment=SheetCam TNG
 Categories=Graphics
 Exec="/usr/share/SheetCam/data/run-sheetcam"
 Icon=/usr/share/SheetCam/data/resources/sheetcamlogo.png
