@@ -69,12 +69,13 @@ modules:
   - type: script
     scripts:
       # # Gets the latest plugins
+      - appimages.sh
+      - appimagelauncher.sh
       - stlthumb.sh
       - flathub.sh
       - inkscape.sh
       - lightburn.sh
       - sheetcam.sh
-      # - appimagelauncher.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
 
