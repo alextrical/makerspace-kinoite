@@ -12,11 +12,11 @@ curl -s https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/late
 | grep "browser_download_url.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -P /usr/share/appimages -qi -
+| wget -nc -O /usr/share/appimages/OpenBuilds-CONTROL.AppImage -qi -
 
 #OrcaSlicer 
 curl -s https://api.github.com/repos/SoftFever/OrcaSlicer/releases/latest \
 | grep "browser_download_url.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -P /usr/share/appimages -qi -
+| wget -nc -O /usr/share/appimages/OrcaSlicer.AppImage -qi -
