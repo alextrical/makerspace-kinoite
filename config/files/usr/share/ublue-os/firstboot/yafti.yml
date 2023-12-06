@@ -106,7 +106,21 @@ screens:
             - VSCodium: com.vscodium.codium
             - Arduino2: cc.arduino.IDE2
             - RPi Imager: org.raspberrypi.rpi-imager
-
+  set-flatpak-defaults:
+    source: yafti.screen.consent
+    values:
+      title: Setup flatpak defaults!
+      # condition:
+      #   run: flatpak remotes --columns=name | grep fedora
+      description: |
+        Set Flatpak defaults.
+      actions:
+        - run: flatpak override --env=PRUSA_SLICER_DARK_THEME=true com.prusa3d.PrusaSlicer
+        - run: flatpak override --env=GTK_THEME=Adwaita:dark
+        #- run: 
+        #- run: 
+        #- run: 
+        #- run: 
   final-screen:
     source: yafti.screen.title
     values:
