@@ -30,4 +30,4 @@ curl -s https://api.github.com/repos/inkstitch/inkstitch/releases/latest \
 | tr -d \" \
 | xargs wget -qO - \
 | xz -d \
-| tar -xf - -C /usr/share/inkscape/
+| tar -xf - -C /usr/share/inkscape/extensions/
