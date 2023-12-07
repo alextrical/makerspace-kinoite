@@ -70,6 +70,7 @@ modules:
     scripts:
       # # Gets the latest plugins
       - orcaslicer.sh
+      - nextcloud.sh
       - stlthumb.sh
       - flathub.sh
       - inkscape.sh
