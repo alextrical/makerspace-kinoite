@@ -71,6 +71,7 @@ modules:
       # # Gets the latest plugins
       - orcaslicer.sh
       - nextcloud.sh
+      - openbuildscontrol.sh
       - stlthumb.sh
       - flathub.sh
       - inkscape.sh
