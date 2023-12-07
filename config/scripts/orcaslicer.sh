@@ -19,7 +19,7 @@ chmod +x /tmp/OrcaSlicer/OrcaSlicer.AppImage
 
 #Extract and move to Usr folder
 (cd /tmp/OrcaSlicer && /tmp/OrcaSlicer/OrcaSlicer.AppImage --appimage-extract)
-# yes | cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
+yes | cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/resources/* /usr/resources
 
