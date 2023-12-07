@@ -59,9 +59,9 @@ screens:
         - run: cp /usr/share/plasma/avatars/photos/Pencils.png /var/lib/AccountsService/icons/makerspace
         - run: echo "[User]" | tee /var/lib/AccountsService/users/makerspace
         - run: echo "Icon=/var/lib/AccountsService/icons/makerspace" | tee -a /var/lib/AccountsService/users/makerspace
-        - run: kwriteconfig5 --file usr/etc/sddm.conf --group Autologin --key User makerspace 
-        - run: kwriteconfig5 --file usr/etc/sddm.conf --group Autologin --key Session plasmax11.desktop 
-        - run: kwriteconfig5 --file usr/etc/sddm.conf --group General --key DisplayServer x11 
+        - run: kwriteconfig5 --file /usr/etc/sddm.conf --group Autologin --key User makerspace 
+        - run: kwriteconfig5 --file /usr/etc/sddm.conf --group Autologin --key Session plasmax11.desktop 
+        - run: kwriteconfig5 --file /usr/etc/sddm.conf --group General --key DisplayServer x11 
   applications:
     source: yafti.screen.package
     values:
@@ -77,15 +77,13 @@ screens:
           default: true
           packages:
             - Fedora Media Writer: org.fedoraproject.MediaWriter
-            - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-            - Font Downloader: org.gustavoperedo.FontDownloader
             - Mozilla Firefox: org.mozilla.firefox
             - Breeze Theme: org.gtk.Gtk3theme.Breeze
             - Gwenview: org.kde.gwenview
             - Okular: org.kde.okular
             - VLC: org.videolan.VLC
-        Maker Apps:
-          description: Makerspace applications.
+        Office Apps:
+          description: Office applications.
           default: true
           packages:
             - LibreOffice: org.libreoffice.LibreOffice
