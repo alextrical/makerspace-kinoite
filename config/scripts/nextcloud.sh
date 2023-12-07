@@ -21,13 +21,13 @@ chmod +x /tmp/Nextcloud/Nextcloud-x86_64.AppImage
 
 mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloud /usr/bin/nextcloud
 mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloudcmd /usr/bin/nextcloudcmd
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/lib/* /usr/lib
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/libexec/* /usr/libexec
-mkdir -p /usr/plugins
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/plugins/* /usr/plugins
-mkdir -p /usr/resources
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/resources/* /usr/resources
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/share/* /usr/share
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/lib/* /usr/lib
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/libexec/* /usr/libexec
+# mkdir -p /usr/plugins
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/plugins/* /usr/plugins
+# mkdir -p /usr/resources
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/resources/* /usr/resources
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/share/* /usr/share
 
 #Setup Desktop file
 mv /tmp/Nextcloud/squashfs-root/com.nextcloud.desktopclient.nextcloud.desktop /usr/share/applications/Nextcloud.desktop
