@@ -11,10 +11,10 @@ curl -s https://api.github.com/repos/nextcloud-releases/desktop/releases/latest 
 | grep "browser_download_url.*AppImage\"" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -O /usr/share/appimages/Nextcloud/Nextcloud-x86_64.AppImage -qi -
+| wget -nc -O /usr/share/appimages/Nextcloud-x86_64.AppImage -qi -
 
 #Make executable
-chmod +x /usr/share/appimages/Nextcloud/Nextcloud-x86_64.AppImage
+chmod +x /usr/share/appimages/Nextcloud-x86_64.AppImage
 
 # #Extract and move to Usr folder
 # (cd /tmp/Nextcloud && /tmp/Nextcloud/Nextcloud-x86_64.AppImage --appimage-extract)
