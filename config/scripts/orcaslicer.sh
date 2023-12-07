@@ -19,9 +19,12 @@ chmod +x /tmp/OrcaSlicer/OrcaSlicer.AppImage
 
 #Extract and move to Usr folder
 (cd /tmp/OrcaSlicer && /tmp/OrcaSlicer/OrcaSlicer.AppImage --appimage-extract)
-cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
+# yes | cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/resources/* /usr/resources
+mv /tmp/OrcaSlicer/squashfs-root/usr/share/icons/hicolor/192x192/apps/* /usr/share/icons/hicolor/192x192/apps
+mv /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
+mv /tmp/OrcaSlicer/squashfs-root/resources /usr/resources
 
 #Setup Desktop file
 mv /tmp/OrcaSlicer/squashfs-root/OrcaSlicer.desktop /usr/share/applications/OrcaSlicer.desktop
