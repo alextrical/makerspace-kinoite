@@ -21,7 +21,8 @@ chmod +x /tmp/Nextcloud/Nextcloud-x86_64.AppImage
 
 mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloud /usr/bin/nextcloud
 mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloudcmd /usr/bin/nextcloudcmd
-# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/lib/* /usr/lib
+echo "Copy to /usr/lib"
+cp -rf /tmp/Nextcloud/squashfs-root/usr/lib/* /usr/lib
 # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/libexec/* /usr/libexec
 # mkdir -p /usr/plugins
 # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/plugins/* /usr/plugins
