@@ -82,6 +82,7 @@ screens:
             - Gwenview: org.kde.gwenview
             - Okular: org.kde.okular
             - VLC: org.videolan.VLC
+            - Wine: org.winehq.wine
         Office Apps:
           description: Office applications.
           default: true
