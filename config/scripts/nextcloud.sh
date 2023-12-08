@@ -23,18 +23,6 @@ chmod +x /usr/share/appimages/Nextcloud-x86_64.AppImage
 #Extract
 (cd /tmp/Nextcloud && /usr/share/appimages/Nextcloud-x86_64.AppImage --appimage-extract)
 
-#Move
-# mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloud /usr/bin/nextcloud
-# mv /tmp/Nextcloud/squashfs-root/usr/bin/nextcloudcmd /usr/bin/nextcloudcmd
-# echo "Copy to /usr/lib"
-# cp -rf /tmp/Nextcloud/squashfs-root/usr/lib/* /usr/lib
-# # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/libexec/* /usr/libexec
-# # mkdir -p /usr/plugins
-# # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/plugins/* /usr/plugins
-# # mkdir -p /usr/resources
-# # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/resources/* /usr/resources
-# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/share/icons/* /usr/share/icons
-
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/16x16/apps/* /usr/share/icons/hicolor/16x16/apps
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/24x24/apps/* /usr/share/icons/hicolor/24x24/apps
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/32x32/apps/* /usr/share/icons/hicolor/32x32/apps
@@ -50,4 +38,3 @@ mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/1024x1024/apps/* /usr/sh
 #Setup Desktop file
 mv /tmp/Nextcloud/squashfs-root/com.nextcloud.desktopclient.nextcloud.desktop /usr/share/applications/Nextcloud.desktop
 sed -i 's@Exec=nextcloud@Exec=/usr/bin/nextcloud@g' /usr/share/applications/Nextcloud.desktop
-

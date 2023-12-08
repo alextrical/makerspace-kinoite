@@ -8,16 +8,23 @@ set -oue pipefail
 mkdir -p /usr/share/appimages
 
 #OpenBuilds-CONTROL 
+#Download
 curl -s https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest \
 | grep "browser_download_url.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -O /usr/share/appimages/OpenBuilds-CONTROL.AppImage -qi -
+| wget -nc -O /usr/share/appimages/OpenBuildsCONTROL.AppImage -qi -
 
 #Make executable
-chmod +x /usr/share/appimages/OpenBuilds-CONTROL.AppImage
+chmod +x /usr/share/appimages/OpenBuildsCONTROL.AppImage
 
-# #Extract
-# (cd /tmp/Nextcloud && /usr/share/appimages/Nextcloud-x86_64.AppImage --appimage-extract)
-
-# #Move
+#Setup Desktop file
+cat > /usr/share/applications/OpenBuildsCONTROL.desktop << EOF
+[Desktop Entry]
+Type=Application
+Name=OpenBuildsCONTROL
+Comment=OpenBuildsCONTROL CNC Machine Host Software
+Exec=/usr/share/appimages/OpenBuildsCONTROL.AppImage --no-sandbox %U
+Icon=OpenBuildsCONTROL
+Categories=Graphics;
+EOF

@@ -5,15 +5,18 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Your code goes here.
 #Lightburn
+#Download
 curl -s https://api.github.com/repos/LightBurnSoftware/deployment/releases/latest \
 | grep "browser_download_url.*7z" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -nc -O /tmp/LightBurn-Linux64.7z --show-progress -qi -
-#extract 7z somewhere here
+
+#extract 7z to application share
 7z x -t7z /tmp/LightBurn-Linux64.7z -o/usr/share/
+
+#Setup Desktop file
 cat > /usr/share/applications/lightburn.desktop << EOF
 [Desktop Entry]
 Type=Application
@@ -23,4 +26,3 @@ Exec=/usr/share/LightBurn/LightBurn
 Icon=/usr/share/LightBurn/LightBurn.png
 Categories=Graphics;
 EOF
-chmod +x /usr/share/applications/lightburn.desktop
