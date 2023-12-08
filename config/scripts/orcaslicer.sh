@@ -15,13 +15,13 @@ curl -s https://api.github.com/repos/SoftFever/OrcaSlicer/releases/latest \
 | grep "browser_download_url.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -O /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage -qi -
+| wget -nc -O /usr/share/appimages/OrcaSlicer.AppImage -qi -
 
 #Make executable
-chmod +x /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage
+chmod +x /usr/share/appimages/OrcaSlicer.AppImage
 
 #Extract and move to Usr folder
-(cd /tmp/OrcaSlicer && /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage --appimage-extract)
+(cd /tmp/OrcaSlicer && /usr/share/appimages/OrcaSlicer.AppImage --appimage-extract)
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/resources/* /usr/resources
