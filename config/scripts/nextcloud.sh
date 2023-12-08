@@ -44,6 +44,7 @@ mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/72x72/apps/* /usr/share/
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/128x128/apps/* /usr/share/icons/hicolor/128x128/apps
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/256x256/apps/* /usr/share/icons/hicolor/256x256/apps
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/512x512/apps/* /usr/share/icons/hicolor/512x512/apps
+mkdir -p /usr/share/icons/hicolor/1024x1024/apps
 mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/1024x1024/apps/* /usr/share/icons/hicolor/1024x1024/apps
 
 #Setup Desktop file
