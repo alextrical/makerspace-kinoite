@@ -33,18 +33,18 @@ chmod +x /usr/share/appimages/Nextcloud-x86_64.AppImage
 # # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/plugins/* /usr/plugins
 # # mkdir -p /usr/resources
 # # yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/resources/* /usr/resources
-yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/share/icons/* /usr/share/icons
+# yes | cp -rf /tmp/Nextcloud/squashfs-root/usr/share/icons/* /usr/share/icons
 
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/16x16/apps/* /usr/share/icons/hicolor/16x16/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/24x24/apps/* /usr/share/icons/hicolor/24x24/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/32x32/apps/* /usr/share/icons/hicolor/32x32/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/48x48/apps/* /usr/share/icons/hicolor/48x48/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/64x64/apps/* /usr/share/icons/hicolor/64x64/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/72x72/apps/* /usr/share/icons/hicolor/72x72/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/128x128/apps/* /usr/share/icons/hicolor/128x128/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/256x256/apps/* /usr/share/icons/hicolor/256x256/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/512x512/apps/* /usr/share/icons/hicolor/512x512/apps
-# mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/1024x1024/apps/* /usr/share/icons/hicolor/1024x1024/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/16x16/apps/* /usr/share/icons/hicolor/16x16/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/24x24/apps/* /usr/share/icons/hicolor/24x24/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/32x32/apps/* /usr/share/icons/hicolor/32x32/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/48x48/apps/* /usr/share/icons/hicolor/48x48/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/64x64/apps/* /usr/share/icons/hicolor/64x64/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/72x72/apps/* /usr/share/icons/hicolor/72x72/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/128x128/apps/* /usr/share/icons/hicolor/128x128/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/256x256/apps/* /usr/share/icons/hicolor/256x256/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/512x512/apps/* /usr/share/icons/hicolor/512x512/apps
+mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/1024x1024/apps/* /usr/share/icons/hicolor/1024x1024/apps
 
 #Setup Desktop file
 mv /tmp/Nextcloud/squashfs-root/com.nextcloud.desktopclient.nextcloud.desktop /usr/share/applications/Nextcloud.desktop
