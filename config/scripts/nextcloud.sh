@@ -37,4 +37,4 @@ mv /tmp/Nextcloud/squashfs-root/usr/share/icons/hicolor/1024x1024/apps/* /usr/sh
 
 #Setup Desktop file
 mv /tmp/Nextcloud/squashfs-root/com.nextcloud.desktopclient.nextcloud.desktop /usr/share/applications/Nextcloud.desktop
-sed -i 's@Exec=nextcloud@Exec=/usr/bin/nextcloud@g' /usr/share/applications/Nextcloud.desktop
+sed -i 's@Exec=nextcloud@Exec=/usr/share/appimages/Nextcloud-x86_64.AppImage@g' /usr/share/applications/Nextcloud.desktop
