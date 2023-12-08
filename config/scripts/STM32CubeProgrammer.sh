@@ -6,12 +6,18 @@
 set -oue pipefail
 
 #Setup Desktop file
-cat > /usr/share/applications/OpenBuildsCONTROL.desktop << EOF
+cat > /usr/share/applications/STM32CubeProgrammer.desktop << EOF
 [Desktop Entry]
 Type=Application
-Name=OpenBuildsCONTROL
-Comment=OpenBuildsCONTROL CNC Machine Host Software
-Exec=/usr/share/appimages/OpenBuildsCONTROL.AppImage --no-sandbox %U
-Icon=OpenBuildsCONTROL
-Categories=Graphics;
+Name=STM32CubeProgrammer
+Name[en]=STM32CubeProgrammer
+Comment=STM32CubeProgrammer
+Comment[en]=STM32CubeProgrammer
+Exec=/usr/share/STMicroelectronics/STM32CubeProgrammer/bin/STM32CubeProgrammer
+Icon=/usr/share/STMicroelectronics/STM32CubeProgrammer/util/Programmer.ico
+Path=/usr/share/STMicroelectronics/STM32CubeProgrammer/bin
+Categories=Development;
 EOF
+
+#Make executable
+chmod +x /usr/share/STMicroelectronics/STM32CubeProgrammer/bin/STM32CubeProgrammer

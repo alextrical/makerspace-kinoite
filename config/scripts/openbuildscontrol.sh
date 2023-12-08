@@ -15,6 +15,8 @@ curl -s https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/late
 | tr -d \" \
 | wget -nc -O /usr/share/appimages/OpenBuildsCONTROL.AppImage -qi -
 
+wget https://raw.githubusercontent.com/OpenBuilds/OpenBuilds-CONTROL/master/app/icon.png -O /usr/share/icons/OpenBuildsCONTROL.png
+
 #Make executable
 chmod +x /usr/share/appimages/OpenBuildsCONTROL.AppImage
 
