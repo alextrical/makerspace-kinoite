@@ -5,26 +5,29 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-mkdir /tmp/OrcaSlicer
+
 #OrcaSlicer
+mkdir -p /usr/share/appimages
+mkdir -p /tmp/OrcaSlicer
+
 #Download
 curl -s https://api.github.com/repos/SoftFever/OrcaSlicer/releases/latest \
 | grep "browser_download_url.*AppImage" \
 | cut -d : -f 2,3 \
 | tr -d \" \
-| wget -nc -O /tmp/OrcaSlicer/OrcaSlicer.AppImage -qi -
+| wget -nc -O /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage -qi -
 
 #Make executable
-chmod +x /tmp/OrcaSlicer/OrcaSlicer.AppImage
+chmod +x /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage
 
 #Extract and move to Usr folder
-(cd /tmp/OrcaSlicer && /tmp/OrcaSlicer/OrcaSlicer.AppImage --appimage-extract)
+(cd /tmp/OrcaSlicer && /usr/share/appimages/OrcaSlicer/OrcaSlicer.AppImage --appimage-extract)
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/usr/share/* /usr/share
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
 # yes | cp -rf /tmp/OrcaSlicer/squashfs-root/resources/* /usr/resources
 mv /tmp/OrcaSlicer/squashfs-root/usr/share/icons/hicolor/192x192/apps/* /usr/share/icons/hicolor/192x192/apps
-mv /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
-mv /tmp/OrcaSlicer/squashfs-root/resources /usr/resources
+# mv /tmp/OrcaSlicer/squashfs-root/bin/* /usr/bin
+# mv /tmp/OrcaSlicer/squashfs-root/resources /usr/resources
 
 #Setup Desktop file
 mv /tmp/OrcaSlicer/squashfs-root/OrcaSlicer.desktop /usr/share/applications/OrcaSlicer.desktop

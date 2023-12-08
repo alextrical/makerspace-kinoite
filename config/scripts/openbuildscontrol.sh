@@ -16,3 +16,8 @@ curl -s https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/late
 
 #Make executable
 chmod +x /usr/share/appimages/OpenBuilds-CONTROL.AppImage
+
+# #Extract
+# (cd /tmp/Nextcloud && /usr/share/appimages/Nextcloud-x86_64.AppImage --appimage-extract)
+
+# #Move
