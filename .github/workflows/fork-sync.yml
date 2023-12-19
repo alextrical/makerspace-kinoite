@@ -9,6 +9,10 @@ jobs:
   sync:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
 
     steps:
       - uses: tgymnich/fork-sync@v1.8
