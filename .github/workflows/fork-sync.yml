@@ -14,5 +14,6 @@ jobs:
       - uses: tgymnich/fork-sync@v1.8
         with:
           owner: ublue-os
-          base: startingpoint
-          head: startingpoint
+          repo: startingpoint
+          base: template
+          head: template
