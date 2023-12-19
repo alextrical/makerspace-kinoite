@@ -1,6 +1,5 @@
 version: "1"
-rules:
-  - base: template
-    upstream: ublue-os:template
-    mergeMethod: hardreset
-    mergeUnstable: false
+rules:                           # Array of rules
+  - base: template               # Required. Target branch
+    upstream: ublue-os:template  # Required. Must be in the same fork network.
+    mergeMethod: hardreset       # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
