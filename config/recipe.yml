@@ -21,6 +21,35 @@ modules:
           # should be added into /usr/etc/ as that is the proper "distro"
           # config directory on ostree. Read more in the files module's README
 
+  - type: default-flatpaks
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - org.inkscape.Inkscape
+        - org.blender.Blender
+        - org.freecadweb.FreeCAD
+        - org.librecad.librecad
+        - org.openscad.OpenSCAD
+        - com.prusa3d.PrusaSlicer
+        - com.vscodium.codium
+        - cc.arduino.IDE2
+        - org.raspberrypi.rpi-imager
+        - org.winehq.wine
+        - org.videolan.VLC
+        - org.kde.okular
+        - org.kde.gwenview
+        - org.mozilla.firefox
+        - org.fedoraproject.MediaWriter
+      # remove:
+      #   - org.gnome.eog
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-name: flathub
+
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
