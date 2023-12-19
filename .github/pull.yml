@@ -1,6 +1,6 @@
 version: "1"
 rules:
   - base: template
-    upstream: ublue-os/startingpoint:template
+    upstream: ublue-os:template
     mergeMethod: hardreset
     mergeUnstable: false
